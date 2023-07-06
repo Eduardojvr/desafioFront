@@ -1,0 +1,62 @@
+<section class="tabelas table-container">
+  <h3>Selecione uma referência</h3>
+  <select [(ngModel)]="opcaoSelecionada" (change)="buscarDadosDespesas()">
+    <option *ngFor="let option of listaReferencias" [value]="option.ano_movimentacao">{{ option.ano_movimentacao }}</option>
+  </select>
+
+
+  <h2>Despesas totais em cada mês</h2>
+
+
+  <table >
+    <thead>
+      <tr>
+        <th>Mes</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of despesasMes">
+        <td>{{ item.mes_movimentacao }}</td>
+        <td>{{ item.sum | formataMoeda}}</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="tabelas table-container">
+  <h2>Despesas totais agrupadas por categoria</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Categoria</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of despesasCategoria">
+        <td>{{ item.categoria_economica_nome }}</td>
+        <td>{{ item.sum | formataMoeda }}</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+<section class="tabelas table-container">
+  <h2> Origem do dinheiro agrupado por fonte</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Fonte</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of fonte">
+        <td>{{ item.fonte_recurso_nome }}</td>
+        <td>{{ item.sum | formataMoeda}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</section>
