@@ -29,3 +29,5 @@ Siga estes passos para configurar o projeto:
     
 4. Acesse
     http://localhost:4200/
+
+ ![img](img\img.png)
