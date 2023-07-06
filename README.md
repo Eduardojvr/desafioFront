@@ -30,4 +30,4 @@ Siga estes passos para configurar o projeto:
 4. Acesse
     http://localhost:4200/
 
- ![img](img\img.png)
+ ![img](https://github.com/Eduardojvr/desafioFront/blob/main/img/img.png)https://github.com/Eduardojvr/desafioFront/blob/main/img/img.png)
